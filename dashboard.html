@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrekkingTech</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="public/css/vendor.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png">
+
+    <script>
+        window.history.pushState({ page: 1 }, "", "");
+        window.onpopstate = function (event) {
+            if (event) {
+                window.location.href = 'http://127.0.0.1:5500/dashboard.html'
+            }
+        }
+
+    </script>
+</head>
+
+<body id="top">
+    <div id="alert"></div>
+    <!-- <script>location.reload()</script>  -->
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <!-- <script>
+    window.location.reload();
+    </script> -->
+
+    <div class="s-pagewrap">
+
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="#">
+                        <img src="public/images/logo white.png" alt="Homepage">
+                    </a>
+                </div>
+
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
+
+            <div class="row s-header__nav-wrap">
+                <nav class="s-header__nav">
+                    <ul>
+
+                        <li class="current"><a href="#works" class="smoothscroll">Dashboard</a></li>
+                        <!-- <li><a href="#intro" class="smoothscroll">Intro</a></li> -->
+                        <li><a href="#contact" class="smoothscroll">Get In Touch</a></li>
+                        <li><a href="/" id="log_out">Logout</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="s-header__social">
+                    <ul class="nav__links">
+                        <li class="nav__item">
+                            <a class="nav__link--btn btn--stroke"><span id="email"></span> <span
+                                    id="disname"></span></a>
+                        </li>
+                    </ul>
+
+            </div> <!-- end s-header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+
+
+
+        <!-- ## works
+        ================================================== -->
+        <section id="works" class="s-works target-section">
+
+            <div class="row section-header section-header--dark has-bottom-sep">
+                <div class="column lg-12">
+                    <h3 class="text-pretitle">Hi <span id="username"></span>
+
+                    </h3>
+                    <h1 class="text-display-title">Here are some of our upcoming events. Feel free to check them out.
+                    </h1>
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+                data-animate-block>
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 1.png"
+                                title="ETHIndia" data-size="1050x700">
+                                <img src="public/images/portfolio/Event 1@1x.png"
+                                    srcset="public/images/portfolio/Event 1@1x.png 1x, public/images/portfolio/Event 1@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__cat">Event <span id="tick1"></span></div>
+                            <h4 class="folio-item__title">ETHIndia</h4>
+                        </div>
+                        <a href="/event-1.html?ETHIndia" title="Event Description"
+                            class="folio-item__project-link">Event Description</a>
+                        <div class="folio-item__caption">
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 2.png" title="define"
+                                data-size="1050x700">
+                                <img src="public/images/portfolio/Event 2@1x.png"
+                                    srcset="public/images/portfolio/Event 2@1x.png 1x, public/images/portfolio/Event 2@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+
+                            <div class="folio-item__cat">Event <span id="tick2"></span> </div>
+                            <h4 class="folio-item__title">Define 2022</h4>
+                        </div>
+                        <a href="/event-2.html?define" title="Event Description" class="folio-item__project-link">Event
+                            Description</a>
+                        <div class="folio-item__caption">
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 3.png"
+                                title="Ur-Hackathon" data-size="1050x700">
+                                <img src="public/images/portfolio/Event 3@1x.png"
+                                    srcset="public/images/portfolio/Event 3@1x.png 1x, public/images/portfolio/Event 3@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__cat">Event <span id="tick3"></span></div>
+                            <h4 class="folio-item__title">Ur-Hackathon</h4>
+                        </div>
+                        <a href="/event-3.html?Ur-Hackathon" title="Event Description"
+                            class="folio-item__project-link">Event Description</a>
+                        <div class="folio-item__caption">
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 4.png" title="Tenet"
+                                data-size="1050x700">
+                                <img src="public/images/portfolio/Event 4@1x.png"
+                                    srcset="public/images/portfolio/Event 4@1x.png 1x, public/images/portfolio/Event 4@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__cat">Event <span id="tick4"></span></div>
+                            <h4 class="folio-item__title">Tenet</h4>
+                        </div>
+                        <a href="/event-4.html?Tenet" title="Event Description" class="folio-item__project-link">Event
+                            Description</a>
+                        <div class="folio-item__caption">
+
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 5.png" title="SWOC S3"
+                                data-size="1050x700">
+                                <img src="public/images/portfolio/Event 5@1x.png"
+                                    srcset="public/images/portfolio/Event 5@1x.png 1x, public/images/portfolio/Event 5@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__cat">Event <span id="tick5"></span></div>
+                            <h4 class="folio-item__title">SWOC S3</h4>
+                        </div>
+                        <a href="/event-5.html?SWOC_S3" title="Event Description" class="folio-item__project-link">
+                            Event Description
+                        </a>
+                        <div class="folio-item__caption">
+
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+
+                <div class="column">
+                    <div class="folio-item" data-animate-el>
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="public/images/portfolio/Event 6.png"
+                                title="Innovate NSUT" data-size="1050x700">
+                                <img src="public/images/portfolio/Event 6@1x.png"
+                                    srcset="public/images/portfolio/Event 6@1x.png 1x, public/images/portfolio/Event 6@2x.png 2x"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__cat">Event <span id="tick6"></span></div>
+                            <h4 class="folio-item__title">Innovate NSUT</h4>
+                        </div>
+                        <a href="/event-6.html?Innovate" title="Event Description"
+                            class="folio-item__project-link">Event Description</a>
+                        <div class="folio-item__caption">
+
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+            </div> <!-- folio-list -->
+
+            <div class="row clients-outer" data-animate-block>
+                <div class="column lg-12">
+
+                    <h3 class="text-clients-title" data-animate-el>
+                        We've had the priveledge with working with <br>
+                        some of the largest and most iconic brands
+                    </h3>
+
+                    <div class="swiper-container clients" data-animate-el>
+                        <div class="swiper-wrapper clients__content">
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/dropbox.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/atom.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/github.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/redhat.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/medium.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/messenger.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/steam.svg" /></a>
+                            <a href="#0" title="" class="swiper-slide clients__slide"><img
+                                    src="public/images/icons/clients/spotify.svg" /></a>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div> <!-- end clients -->
+
+                </div> <!-- end column -->
+            </div> <!-- end clients-outer -->
+
+
+
+
+    </div> <!-- end swiper-wrapper -->
+
+    <div class="swiper-pagination"></div>
+
+    </div> <!-- end swiper-container -->
+
+    </div> <!-- end column -->
+    </div> <!-- end row testimonials -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- ## contact
+        ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="row section-header section-header--dark"">
+                <div class=" column lg-12">
+            <h3 class="text-pretitle">Get In Touch</h3>
+            <h1 class="text-display-title">
+                Do you have an idea or any questions in mind? Let’s work together. </h1>
+        </div>
+        </div>
+
+        <div class="row row-x-center text-center s-contact__content">
+            <div class="column lg-12">
+                <p class="lead">
+                    We are readily available to take all your queries and epic ideas. Your feedbacks and questions is
+                    our priority. Feel free to provide us your suggestions for the future developnment.
+                </p>
+                <div class="btn-wrap">
+                    <a href="/contact.html" target="_parent" class="btn btn--primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                            <path
+                                d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z">
+                            </path>
+                        </svg>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="s-footer">
+
+            <div class="row s-footer__top">
+                <div class="column lg-5 md-8 stack-on-700 s-footer__block contact-address">
+                    <h4 class="h6">Where to Find Us</h4>
+
+                    <p>
+                        Atal Bihari Vajpayee <br>
+                        Indian Institute of Information Technology and Management <br>
+                        Gwalior
+                    </p>
+                </div>
+
+                <div class="column lg-3 md-4 stack-on-700 s-footer__block contact-social">
+                    <h4 class="h6">Follow Us</h4>
+
+                    <ul class="contact-list">
+                        <li><a href="#0">Facebook</a></li>
+                        <li><a href="#0">Twitter</a></li>
+                        <li><a href="#0">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="column lg-3 md-12 s-footer__block contact-number">
+                    <h4 class="h6">Contact Us</h4>
+
+                    <ul class="contact-list">
+                        <li><a href="mailto:upsilonquery@gmail.com">info@trekkingtech.com</a></li>
+                        <li><a href="tel:197-543-2345">+091 543 2345</a></li>
+                        <li><a href="tel:197-123-9876">+091 123 9876</a></li>
+                    </ul>
+                </div>
+            </div> <!-- end s-footer__top -->
+
+            <div class="row s-footer__bottom">
+                <div class="column ss-copyright">
+                    <span>© Copyright TrekkingTech 2022</span>
+                    <span>Design by <a href="#">Upsilon</a></span>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <span class="ss-go-top__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill:rgba(0, 0, 0, 1);transform:rotate(90deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1)">
+                                <path d="M6 4H18V6H6zM11 14L11 20 13 20 13 14 18 14 12 8 6 14z"></path>
+                            </svg>
+                        </span>
+                        <span class="ss-go-top__text">Back to Top</span>
+                    </a>
+                </div>
+            </div> <!-- end s-footer__top -->
+
+        </footer>
+
+    </section> <!-- end s-contact -->
+
+    </div> <!-- end -s-pagewrap -->
+
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="./connection/dashboard.js"></script>
+    <script src="public/js/plugins.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

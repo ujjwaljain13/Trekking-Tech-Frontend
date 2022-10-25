@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="public/css/signup.css" />
+  <!-- favicons
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <title>Sign up</title>
+</head>
+
+<body>
+
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form class="sign-in-form">
+          <h2 class="title">Sign up</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" />
+          </div>
+
+          <input href="/login.html" type="submit" value="Sign up" id="sign_in" class="btn solid" />
+          <div id="alert">
+
+
+          </div>
+
+          <!-- <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a> -->
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panels-container">
+    <div class="panel left-panel">
+      <div class="content">
+        <h3>One of us ?</h3>
+        <p>
+          Login in your account today and do grab your valuable seat in upcoming events!!
+        </p>
+        <button class="btn transparent"><a class="btn-login" href="/login.html">Login</a></button>
+      </div>
+      <img src="public/images/register.svg" class="image" alt="" />
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $(".loader_bg").fadeToggle();
+    }, 1500);
+  </script>
+  <!-- <script src="login.js"></script> -->
+  <script src="./connection/signin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="public/css/contact.css" />
+  <!-- favicons
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png" />
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script src="connection/contact.js"></script>
+  <script type="text/javascript">
+    function validateName() {
+      var name = document.getElementById("contact-name").value;
+
+      if (name.length == 0) {
+        // producePrompt('Name is required', 'name-error' , 'red')
+        return false;
+      }
+
+      // if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+      //   //producePrompt('First and last name, please.','name-error', 'red');
+      //   return false;
+      // }
+
+      //producePrompt('Valid', 'name-error', 'green');
+      return true;
+    }
+
+    function validatePhone() {
+      var phone = document.getElementById("contact-phone").value;
+
+      if (phone.length == 0) {
+        //producePrompt('Phone number is required.', 'phone-error', 'red');
+        return false;
+      }
+
+      if (phone.length != 10) {
+        //producePrompt('Include area code.', 'phone-error', 'red');
+        return false;
+      }
+
+      if (!phone.match(/^[0-9]{10}$/)) {
+        //producePrompt('Only digits, please.' ,'phone-error', 'red');
+        return false;
+      }
+
+      //producePrompt('Valid', 'phone-error', 'green');
+      return true;
+    }
+
+    function validateEmail() {
+      var email = document.getElementById("contact-email").value;
+
+      if (email.length == 0) {
+        //producePrompt('Email Invalid','email-error', 'red');
+        return false;
+      }
+
+      if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        //producePrompt('Email Invalid', 'email-error', 'red');
+        return false;
+      }
+
+      //producePrompt('Valid', 'email-error', 'green');
+      return true;
+    }
+
+    function validateMessage() {
+      var message = document.getElementById("contact-message").value;
+      var required = 10;
+      var left = required - message.length;
+
+      if (left > 0) {
+        producePrompt(
+          left + " more characters required",
+          "message-error",
+          "white"
+        );
+        return false;
+      }
+
+      producePrompt("Valid", "message-error", "white");
+      return true;
+    }
+
+    function validateForm() {
+      if (
+        !validateName() ||
+        !validatePhone() ||
+        !validateEmail() ||
+        !validateMessage()
+      ) {
+        jsShow("submit-error");
+        producePrompt(
+          "Please fix errors to submit.",
+          "submit-error",
+          "white"
+        );
+        setTimeout(function () {
+          jsHide("submit-error");
+        }, 2000);
+        return false;
+      } else {
+      }
+    }
+
+    function jsShow(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function jsHide(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    function producePrompt(message, promptLocation, color) {
+      document.getElementById(promptLocation).innerHTML = message;
+      document.getElementById(promptLocation).style.color = color;
+    }
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("qOlUCrdbuGxGV8Pu2");
+    })();
+  </script>
+  <script type="text/javascript">
+    // const ss = document.querySelector(".btn");
+
+    // ss.window.location.reload(true);
+
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          const alertbox = document.getElementById("done");
+          alertbox.style.visibility = "visible";
+          alertbox.innerHTML
+          event.preventDefault();
+          emailjs
+            .sendForm("service_75pueug", "template_7g41098", this)
+            .then(producePrompt("Contact Form Submitted ✔", "done", "white"))
+            .then(
+              async function () {
+                console.log("SUCCESS!");
+                await setInterval(window.location.reload(), 10000);
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+        });
+    };
+  </script>
+</head>
+
+<body>
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+
+  <div class="container">
+    <div class="done" id="done">
+
+    </div>
+    <span class="big-circle"></span>
+    <img src="public/images/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">
+          Do fill the form to get in touch wih us. We will try our fullest to answer your queries within 48hrs !!
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="public/images/location.png" class="icon" alt="" />
+            <p>ABV-IIITM Gwalior, IN 474015</p>
+          </div>
+          <div class="information">
+            <img src="public/images/email.png" class="icon" alt="" />
+            <p>upsilonquery@gmail.com</p>
+          </div>
+          <div class="information">
+            <img src="public/images/phone.png" class="icon" alt="" />
+            <p>123-456-789</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <div class="form-submit" id="form-submit"></div>
+          <!-- <p>Connect with us :</p> -->
+          <div class="social-icons">
+            <!-- <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form id="contact-form" action="contact.html" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+
+          <div class="input-container">
+            <input type="text" name="from_name" class="input" id="contact-name" onkeyup="validateName()" />
+            <label for="">Username</label>
+            <span>Username</span>
+            <div class="error-message" id="name-error"></div>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email_id" class="input" id="contact-email" onkeyup="validateEmail()" />
+            <label for="">Email</label>
+            <span>Email</span>
+            <div class="error-message" id="email-error"></div>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" id="contact-phone" onkeyup="validatePhone()" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+            <div class="error-message" id="phone-error"></div>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input" id="contact-message" onkeyup="validateMessage()"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+            <div class="error-message" id="message-error"></div>
+          </div>
+          <a href="/contact.html">
+            <input type="submit" value="Send" class="btn" onclick="return validateForm();" />
+          </a>
+
+          <div class="error-message" id="submit-error"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $(".loader_bg").fadeToggle();
+    }, 1500);
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="public/js/contact.js"></script>
+</body>
+
+</html>

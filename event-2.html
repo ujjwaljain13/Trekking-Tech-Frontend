@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Define 2022</title>
+    <link rel="stylesheet" href="public/css/event-2.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+
+    <div class="container">
+      <div class="box one">
+        <div class="details">
+          <div class="topic">Description</div>
+          <p>
+            The offline sprint after the pandemic brought us all out of our
+            virtual zones and back into the real world. Define is a 24-hour
+            offline hackathon to channelise your creative minds and bring out
+            solutions for actual problems that exist in this real world.
+          </p>
+
+          <div class="price-box">
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="button1">
+          <button id="enroll_btn">
+            Enroll
+            <!-- <span> <ion-icon name="checkmark-outline"></ion-icon></span> -->
+          </button>
+        </div>
+      </div>
+      <div class="box two">
+        <div class="image-box">
+          <div class="image">
+            <img src="public/images/event2.png" alt="" />
+          </div>
+          <div class="info">
+            <!-- <div class="brand">3rd edition</div> -->
+            <div class="name">define 2022</div>
+            <div class="shipping"><span id="timeleft"></span></div>
+            <div class="timer">
+              <span>Time Left : (<span id="timeleft0"></span>)</span>
+            </div>
+            <div class="button2">
+              <button id="revoke_btn">Revoke</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function () {
+        $(".loader_bg").fadeToggle();
+      }, 1500);
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./connection/event_enrolled.js"></script>
+    <script src="./connection/event.js"></script>
+  </body>
+</html>

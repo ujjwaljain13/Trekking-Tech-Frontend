@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="public/css/login.css" />
+  <!-- favicons
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png" />
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <script type="text/javascript">
+      function preventBack() {
+        window.history.forward();
+      }
+
+      setTimeout("preventBack()", 0);
+
+      window.onunload = function () {
+        null;
+      };
+    </script> -->
+</head>
+
+<body>
+  <!-- <div id="alert"></div> -->
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+  <img class="wave" src="public/images/wave.png" />
+  <span>
+    <div id="alert"></div>
+  </span>
+  <div class="container">
+    <div class="img">
+      <img src="public/images/bg.svg" />
+    </div>
+    <div class="login-content">
+      <form method="post">
+        <img src="public/images/avatar.svg" />
+        <h2 class="title">Welcome</h2>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="div">
+            <h5>Username</h5>
+            <input type="text" name="username" id="username" class="input" />
+          </div>
+        </div>
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <h5>Password</h5>
+            <input type="password" name="password" class="input" id="password" />
+          </div>
+        </div>
+        <a href="/signup.html">New here ?</a>
+        <input type="submit" class="btn" id="login_btn" value="Login" />
+
+        <!-- <p class="social-text">Or Login with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a> -->
+    </div>
+    </form>
+  </div>
+  </div>
+  <script src="./connection/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $(".loader_bg").fadeToggle();
+    }, 1500);
+  </script>
+  <script type="text/javascript" src="public/js/login.js"></script>
+</body>
+
+</html>
