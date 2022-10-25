@@ -10,7 +10,7 @@ const tick3 = document.getElementById("tick3");
 const tick4 = document.getElementById("tick4");
 const tick5 = document.getElementById("tick5");
 const tick6 = document.getElementById("tick6");
-const allurl = "http://localhost:5000/api/auth/alldata";
+const allurl = "https://trekking-tech.onrender.com/api/auth/alldata";
 
 const alldata = async () => {
   await fetch(allurl, {

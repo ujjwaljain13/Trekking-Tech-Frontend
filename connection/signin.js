@@ -1,4 +1,4 @@
-const siginurl = "http://localhost:5000/api/auth/signup";
+const siginurl = "https://trekking-tech.onrender.com/api/auth/signup";
 
 const alert1 = document.getElementById("alert1");
 

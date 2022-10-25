@@ -1,4 +1,4 @@
-const url = "http://localhost:100/login";
+const url = "https://trekking-tech.onrender.com/login";
 
 const func = async () => {
   await fetch(url, {

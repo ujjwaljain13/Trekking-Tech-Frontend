@@ -1,4 +1,4 @@
-const loginurl = "http://localhost:5000/api/auth/login";
+const loginurl = "https://trekking-tech.onrender.com/api/auth/login";
 
 const alert = document.getElementById("alert");
 const username = document.getElementById("username");

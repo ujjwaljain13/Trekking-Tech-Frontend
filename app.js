@@ -1,6 +1,6 @@
 const feedDisplay = document.querySelector("#disname");
 
-await fetch("http://localhost:100/dashboard")
+await fetch("https://trekking-tech.onrender.com/dashboard")
   .then(async (response) => {
     const data = response.json();
     console.log(data);
