@@ -11,7 +11,7 @@ const login = async (e) => {
     username: username.value,
     password: password.value,
   };
-  await fetch(loginurl, {
+  await fetch('https://trekking-tech.onrender.com/api/auth/login', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
