@@ -36,7 +36,7 @@ const login = async (e) => {
 
       localStorage.setItem("authtoken", data.authtoken);
       if (data.value === 0) {
-        window.location.replace("http://127.0.0.1:5500/dashboard.html");
+        window.location.replace("https://trekking-tech.netlify.app/dashboard.html");
       }
     })
     .catch((err) => {

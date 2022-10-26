@@ -47,7 +47,7 @@ const alldata = async () => {
       else {
         alert.innerHTML = `<span><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             Server error Occured.</span>`;
-        window.location.replace("http://127.0.0.1:5500/login.html");
+        window.location.replace("https://trekking-tech.netlify.app/login.html");
       }
     })
     .catch((err) => {

@@ -31,7 +31,7 @@ const signin = async (e) => {
       console.log(data);
       if (data.value === 0) {
         localStorage.setItem("authtoken", data.authtoken);
-        window.location.replace("http://127.0.0.1:5500/login.html");
+        window.location.replace("https://trekking-tech.netlify.app/login.html");
       } 
 
       else if(data.value ===-2) {
