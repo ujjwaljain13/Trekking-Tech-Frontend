@@ -8,12 +8,8 @@
   height: 100%;
 }
 
-#alert1{
-  color: #000;
-}
-
-#alert2{
-  color: #000;
+#alert{
+  color: #000 !important;
 }
 
 
