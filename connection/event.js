@@ -3,7 +3,7 @@ const timeLeft0 = document.getElementById("timeleft0");
 // const { htmlToText } = require(html-to-text);
 // const email = document.getElementById("email");
 // const alert = document.getElementById("alert");
-const eveurl = "https://trekkingtech-backend.herokuapp.com/api/auth/eventdata";
+const eveurl = "https://trekking-tech.onrender.com/api/auth/eventdata";
 const q = window.location.search;
 const eve_name = q.substring(1);
 

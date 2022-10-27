@@ -1,5 +1,5 @@
-const revokeurl = "https://trekkingtech-backend.herokuapp.com/api/events/revoke";
-const enrollurl = "https://trekkingtech-backend.herokuapp.com/api/events/enrolled";
+const revokeurl = "https://trekking-tech.onrender.com/api/events/revoke";
+const enrollurl = "https://trekking-tech.onrender.com/api/events/enrolled";
 const token = localStorage.getItem("authtoken");
 
 let reg_stat = document.getElementById("enroll_btn");
