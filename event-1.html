@@ -1,100 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>ETHIndia</title>
-    <link rel="stylesheet" href="public/css/event-1.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script>
-      window.addEventListener("pageshow", function (event) {
-        var historyTraversal =
-          event.persisted ||
-          (typeof window.performance != "undefined" &&
-            window.performance.navigation.type === 2);
-        if (historyTraversal) {
-          // Handle page restore.
-          window.location.reload();
-        }
-      });
-    </script> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/event-1.css" />
+    <title>ETHIndia</title>
   </head>
-
   <body>
+
     <div class="loader_bg">
-      <div class="loader"></div>
+        <div class="loader"></div>
+      </div>
+  
+    <div class="modal">
+      <img src="public/images/portfolio/Event 1.png" alt="" />
+      <div class="close"></div>
     </div>
 
     <div class="container">
       <div id="alert"></div>
-      <div class="box one">
-        <div class="details">
-          <div class="topic">Description</div>
-
-          <p>
-            ETHIndia — a movement with the goal of inspiring and fostering a
-            community of builders promoting technological advancements for
-            Ethereum. It’s a place where the leading minds in the Ethereum
-            ecosystem are uniting with 1500+ builders from around the globe to
-            build decentralized applications for the future. Help us build a
-            garden where everyone is self-sovereign, where everyone is an owner,
-            where hierarchies don’t exist.
-          </p>
-
-          <div class="price-box">
-            <div class="price"></div>
-          </div>
-        </div>
-        <div class="button1">
-          <button id="enroll_btn">
-            Enroll
-            <!-- <span> <ion-icon name="checkmark-outline"></ion-icon></span> -->
-          </button>
-        </div>
-      </div>
-
-      <div class="box two">
-        <div class="image-box">
-          <div class="image">
-            <img src="public/images/event1.png" alt="" />
-          </div>
-          <div class="info">
-            <!-- <div class="brand">3rd edition</div> -->
-            <div class="name">ETHIndia</div>
-            <div class="shipping">STARTS AT <div id="timeleft"></div></div>
-            <div class="timer">
-              <span>Time Left : <div id="timeleft0"></div> </span>
+      <div class="card">
+        <div class="header">
+          <!-- <div class="hamburger-menu">
+                    <div class="center"></div>
+                </div> -->
+          <!-- <a href="#" class="mail"> -->
+            <!-- <i class="far fa-envelope"></i> -->
+          </a>
+          <div class="main">
+            <div class="image">
+              <div class="hover">
+                <i class="fas fa-camera fa-2x"></i>
+              </div>
             </div>
-            <div class="button2">
-              <button id="revoke_btn">Revoke</button>
+            <h3 class="name">ETHIndia</h3>
+            <h3 class="sub-name">Event</h3>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="left">
+            <div class="about-container">
+              <h3 class="title">Description</h3>
+              <div class="shipping">
+                STARTS AT
+                <div id="timeleft"></div>
+              </div>
+              <div class="timer">
+                <span
+                  >Time Left :
+                  <div id="timeleft0"></div>
+                </span>
+              </div>
+              <p class="text">
+                ETHIndia — a movement with the goal of inspiring and fostering a
+                community of builders promoting technological advancements for
+                Ethereum. It’s a place where the leading minds in the Ethereum
+                ecosystem are uniting with 1500+ builders from around the globe
+                to build decentralized applications for the future. Help us
+                build a garden where everyone is self-sovereign, where everyone
+                is an owner, where hierarchies don’t exist.
+              </p>
+            </div>
+            <div class="icons-container">
+              <!-- <a href="#" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a> -->
+            </div>
+            <div class="buttons-wrap">
+              <div class="follow-wrap">
+              
+                  <button class="follow" id="enroll_btn">
+                    Enroll
+                    <!-- <span> <ion-icon name="checkmark-outline"></ion-icon></span> -->
+                  </button>
+                
+              </div>
+              <div class="share-wrap">
+                <button id="revoke_btn" class="share">Revoke</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div>
+              <!-- <h3 class="number">91</h3>
+                        <h3 class="number-title">Posts</h3> -->
+            </div>
+            <div>
+              <!-- <h3 class="number">2.4K</h3>
+                        <h3 class="number-title">Following</h3> -->
+            </div>
+            <div>
+              <!-- <h3 class="number">4.7K</h3>
+                        <h3 class="number-title">Followers</h3> -->
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      setTimeout(function () {
-        $(".loader_bg").fadeToggle();
-      }, 1500);
+        const image = document.querySelector('.image');
+const hover = document.querySelector('.hover');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close');
+
+function show(){
+    hover.classList.add('active');
+    modal.classList.add('show');
+}
+
+function hide(){
+    hover.classList.remove('active');
+    modal.classList.remove('show');
+}
+
+image.addEventListener('click', show);
+close.addEventListener('click', hide);
     </script>
 
-     
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  setTimeout(function () {
+    $(".loader_bg").fadeToggle();
+  }, 1500);
+</script>
 
-    <script src="./connection/event_enrolled.js"></script>
-    <script src="./connection/event.js"></script>
-    <!-- <script>
-      let alert = document.getElementById("alert");
-      alert = alert("You have been successfully revoked");
-    </script> -->
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script> -->
+ 
+
+<script src="./connection/event_enrolled.js"></script>
+<script src="./connection/event.js"></script>
   </body>
 </html>
