@@ -60,7 +60,7 @@ const enroll = async () => {
       if (data.value === 0) {
         document.getElementById("alert");
         // swal("Success", "You have been successfully registered!!", "success");
-        Swal.fire({
+        swal.fire({
           icon: 'success',
           title: 'Success',
           text: 'You have been successfully registered!!',
@@ -70,7 +70,7 @@ const enroll = async () => {
       if (data.value === -2) {
         document.getElementById("alert");
         // swal("Information", "You are already registered", "info");
-        Swal.fire({
+        swal.fire({
           icon: 'info',
           title: 'Information',
           text: 'You are already registered',
