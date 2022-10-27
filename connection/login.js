@@ -11,7 +11,7 @@ const login = async (e) => {
     username: username.value,
     password: password.value,
   };
-  await fetch("https://trekking-tech.onrender.com/api/auth/login", {
+  await fetch(loginurl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -27,11 +27,14 @@ const login = async (e) => {
             Invalid credentials.</span>`;
             setTimeout(function () {
               jsHide("alert");
-            }, 2000);
+            }, 2500);
 
             function jsHide(id) {
               document.getElementById(id).style.display = "none";
             }
+            setTimeout(function () {
+            window.location.reload();
+          }, 2500);
       }
 
       localStorage.setItem("authtoken", data.authtoken);

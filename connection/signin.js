@@ -1,8 +1,6 @@
 const siginurl = "https://trekking-tech.onrender.com/api/auth/signup";
-
-const alert1 = document.getElementById("alert1");
-
-const alert2 = document.getElementById("alert2");
+const done=document.getElementById("done");
+const alert= document.getElementById("alert");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -31,28 +29,47 @@ const signin = async (e) => {
       console.log(data);
       if (data.value === 0) {
         localStorage.setItem("authtoken", data.authtoken);
+       
+        producePrompt("Successfully Registered 👍", "done", "black")
+          
+        function producePrompt(message, promptLocation, color) {
+          document.getElementById(promptLocation).innerHTML = message;
+          document.getElementById(promptLocation).style.color = color;
+        }
+      
+      setTimeout(function () {
+        $(".loader_bg").fadeToggle();
+      }, 1500);
+      setTimeout(function () {
         window.location.replace("https://trekking-tech.netlify.app/login.html");
+      }, 1500);
       } 
 
       else if(data.value ===-2) {
-        alert.innerHTML = "Password should be atleast 5 in length";
+        alert.innerHTML = "ⓘ Password should be atleast 5 in length ";
             setTimeout(function () {
-              jsHide("alert1");
-            }, 6000);
+              jsHide("alert");
+            }, 2500);
 
             function jsHide(id) {
               document.getElementById(id).style.display = "none";
             }
+            setTimeout(function () {
+            window.location.reload();
+          }, 2500);
       }
-      else{
-        alert.innerHTML = "Invalid Credentials";
+      else if(data.value ===-3 || data.value ===-4) {
+        alert.innerHTML = "User Already Exist ❌";
             setTimeout(function () {
-              jsHide("alert2");
-            }, 6000);
+              jsHide("alert");
+            }, 2500);
 
             function jsHide(id) {
               document.getElementById(id).style.display = "none";
             }
+            setTimeout(function () {
+            window.location.reload();
+          }, 2500);
       }
 
         
