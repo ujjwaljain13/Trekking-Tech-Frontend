@@ -1,4 +1,4 @@
-const loginurl = "https://trekking-tech.onrender.com/api/auth/login";
+const loginurl = "https://trekkingtech-backend.herokuapp.com/api/auth/login";
 
 const alert = document.getElementById("alert");
 const username = document.getElementById("username");
@@ -11,7 +11,7 @@ const login = async (e) => {
     username: username.value,
     password: password.value,
   };
-  await fetch("https://trekking-tech.onrender.com/api/auth/login", {
+  await fetch("https://trekkingtech-backend.herokuapp.com/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

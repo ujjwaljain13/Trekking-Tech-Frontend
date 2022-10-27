@@ -10,7 +10,7 @@ const tick3 = document.getElementById("tick3");
 const tick4 = document.getElementById("tick4");
 const tick5 = document.getElementById("tick5");
 const tick6 = document.getElementById("tick6");
-const allurl = "https://trekking-tech.onrender.com/api/auth/alldata";
+const allurl = "https://trekkingtech-backend.herokuapp.com/api/auth/alldata";
 
 const alldata = async () => {
   await fetch(allurl, {
@@ -47,7 +47,7 @@ const alldata = async () => {
       else {
         alert.innerHTML = `<span><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             Server error Occured.</span>`;
-        window.location.replace("https://trekking-tech.netlify.app/login.html");
+        window.location.replace("https://trekkingtech-backend.herokuapp.com/login.html");
       }
     })
     .catch((err) => {
