@@ -61,6 +61,8 @@ const log_out = document.getElementById("log_out");
 
 const func = () => {
   localStorage.clear("authtoken");
+  window.open("https://trekking-tech.netlify.app/")
+  window.close("https://trekking-tech.netlify.app/dashboard.html");
 };
 
 log_out.addEventListener("click", func);

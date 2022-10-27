@@ -36,7 +36,8 @@ const login = async (e) => {
 
       localStorage.setItem("authtoken", data.authtoken);
       if (data.value === 0) {
-        window.location.replace("https://trekking-tech.netlify.app/dashboard.html");
+        window.open("https://trekking-tech.netlify.app/dashboard.html",'_blank');
+        window.close("https://trekking-tech.netlify.app/login.html");
       }
     })
     .catch((err) => {
