@@ -1,4 +1,4 @@
-const loginurl = "https://trekking-tech.onrender.com/api/auth/login";
+const loginurl = "https://trekkingtech-backend2022.herokuapp.com/api/auth/login";
 
 const alert = document.getElementById("alert");
 const username = document.getElementById("username");

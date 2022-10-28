@@ -1,4 +1,4 @@
-const siginurl = "https://trekking-tech.onrender.com/api/auth/signup";
+const siginurl = "https://trekkingtech-backend2022.herokuapp.com/api/auth/signup";
 const done=document.getElementById("done");
 const alert= document.getElementById("alert");
 const username = document.getElementById("username");
