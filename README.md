@@ -91,7 +91,7 @@ User Authentication
 5. Run this command to install all the packages (npm install)
 6. Create a new .env file to store required enviorment variables.
 7. Create your own secret key to hash and salt passwords and store it in SECRET_KEY in your .env file.
-8. Create your own PostgresSQL Database locally or on ElephantSQL. All the PSQL queries are present in database folder.
+8. Create your own PostgresSQL Database locally or on ElephantSQL.
 9. Once hosted add the hosted URL in DB_URL in your .env file.
 10. Now on your terminal run this command to start your server (npm run)
 
