@@ -9,9 +9,10 @@
 <img width="1440" alt="Screenshot 2022-10-27 at 6 23 16 PM" src="https://user-images.githubusercontent.com/103581884/198289601-e76d27db-0f58-42d1-885a-2a4785696961.png">
 <img width="1440" alt="Screenshot 202![Uploading Screenshot 2022-10-27 at 6.25.54 PM.png…]()
 2-10-27 at 6 24 48 PM" src="https://user-images.githubusercontent.com/103581884/198290008-4551d2ed-5092-4944-a49b-7ccbb65e0d25.png">
-<img width="1440" alt="Screenshot 2022-10-27 at 6 31 14 PM" src="https://user-images.githubusercontent.com/103581884/198291483-24c7a2aa-9fea-4f44-9336-cb5ac73e79ca.png">
-<img width="1440" alt="Screenshot 2022-10-27 at 6 31 28 PM" src="https://user-images.githubusercontent.com/103581884/198291547-6e4539eb-5dde-4460-9774-f8c141e885f7.png">
-<img width="1440" alt="Screenshot 2022-10-27 at 6 31 42 PM" src="https://user-images.githubusercontent.com/103581884/198291589-4687df2e-77db-4d31-ada8-772b22253480.png">
+<img width="1440" alt="Screenshot 2022-10-27 at 11 16 03 PM" src="https://user-images.githubusercontent.com/103581884/198361726-8db139b6-8c54-4913-9909-b03e46c7c582.png">
+<img width="1440" alt="Screenshot 2022-10-27 at 11 16 44 PM" src="https://user-images.githubusercontent.com/103581884/198361882-edb52472-022e-4511-ad53-f4acf8308715.png">
+<img width="1440" alt="Screenshot 2022-10-27 at 11 17 15 PM" src="https://user-images.githubusercontent.com/103581884/198361989-3407d383-e58b-4786-80ed-958cc0b349ee.png">
+<img width="1440" alt="Screenshot 2022-10-27 at 11 17 30 PM" src="https://user-images.githubusercontent.com/103581884/198362026-82cee0b3-6ca9-4bbe-8ce2-47f0549a17f3.png">
 <img width="1440" alt="Screenshot 2022-10-27 at 6 32 13 PM" src="https://user-images.githubusercontent.com/103581884/198291675-f1fc749d-ab86-4243-b60f-0e424da38139.png">
 
 # HOSTED URL
@@ -56,7 +57,7 @@ User Authentication
 5. Prism.js
 6. FontAwesome
 7. Ionicons
-8. SweetAlertsJS
+8. SweetAlerts2
 
 ## BACKEND
 1. NodeJS
@@ -85,7 +86,7 @@ User Authentication
 ## BACKEND
 1. Fork the repository.
 2. Clone the repository
-3. git clone https://github.com/shreshthgoyal/Essence-Backend.git
+3. git clone https://github.com/ujjwaljain13/Trekking-Tech-Backend.git
 4. Open the folder in which you cloned the repository.
 5. Run this command to install all the packages (npm install)
 6. Create a new .env file to store required enviorment variables.
